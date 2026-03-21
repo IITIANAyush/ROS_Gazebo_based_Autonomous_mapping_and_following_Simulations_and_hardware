@@ -232,6 +232,30 @@ Launch GVD
 ```
 ros2 launch gauntlet_sim gauntlet_nav.launch.py planner_type:=gvd
 ```
+Launch Trajectory Tracker 
+```
+ros2 run gauntlet_sim trajectory_publisher
+```
+Launch AMCL Based localisation
+```
+	 	ros2 run nav2_amcl amcl # then in other terminal you put next commands to activate amcL 
+
+			ros2 lifecycle set /amcl configure
+
+
+			ros2 lifecycle set /amcl activate
+
+
+			ros2 lifecycle get /amcl
+
+      # To give an initial reference to AMCL , we initialise amcl with a initial_pos and orientation , by the following command
+
+  ros2 topic pub /initialpose geometry_msgs/msg/PoseWithCovarianceStamped \
+"{header: {frame_id: 'map'}, pose: {pose: {position: {x: 0.0, y: 0.0}, orientation: {w: 1.0}}}}" \
+--once
+```
+
+
 9. Current Development Stage
 
 Completed:
