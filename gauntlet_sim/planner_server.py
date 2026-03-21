@@ -53,8 +53,8 @@ class PlannerServer(Node):
         )
 
         # Start & Goal (WORLD COORDINATES)
-        self.world_start = (-1.1, -0.8)
-        self.world_goal  = ( 1.1,  1.1)
+        self.world_goal = (0.0, 0.0) # get positioon using 2d pos estimate in rviz2
+        self.world_start  = ( 0.37,  -1.11) # same 
 
         # Timers
         # Timer 1: Main planning logic (checks every second until path is found)
