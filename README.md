@@ -37,7 +37,7 @@ Key tasks completed:
 
 ---
 
-### 2.2 SLAM & Kartographer-Based Map Generation
+### 2.2 SLAM & Cartographer-Based Map Generation
 
 To solve the **Blind Robot Problem**, a complete occupancy grid map was generated using online SLAM & Kartographer.
 
